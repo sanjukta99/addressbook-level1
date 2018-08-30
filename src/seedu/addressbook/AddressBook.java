@@ -674,7 +674,7 @@ public class AddressBook {
      */
     private static String getMessageForFormattedPersonData(String[] person) {
         return String.format(MESSAGE_DISPLAY_PERSON_DATA,
-                getNameFromPerson(person), getPhoneFromPerson(person), getEmailFromPerson(person));
+                getNameFromPerson(person), getPhoneFromPerson(person), getEmailFromPerson(person), getMatricFromPerson(person));
     }
 
     /**
@@ -866,18 +866,29 @@ public class AddressBook {
     }
 
     /**
+     * Returns given person's matric
+     *
+     * @param person whose matric you want
+     */
+    private static String getMatricFromPerson(String[] person) {
+        return person[PERSON_DATA_INDEX_MATRIC];
+    }
+
+    /**
      * Creates a person from the given data.
      *
      * @param name of person
      * @param phone without data prefix
      * @param email without data prefix
+     * @param matric withot data prefix
      * @return constructed person
      */
-    private static String[] makePersonFromData(String name, String phone, String email) {
+    private static String[] makePersonFromData(String name, String phone, String email, String matric) {
         final String[] person = new String[PERSON_DATA_COUNT];
         person[PERSON_DATA_INDEX_NAME] = name;
         person[PERSON_DATA_INDEX_PHONE] = phone;
         person[PERSON_DATA_INDEX_EMAIL] = email;
+        person[PERSON_DATA_INDEX_MATRIC] = matric;
         return person;
     }
 
