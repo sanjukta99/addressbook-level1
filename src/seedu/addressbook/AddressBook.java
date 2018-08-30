@@ -65,6 +65,7 @@ public class AddressBook {
      * at which java String.format(...) method can insert values.
      * =========================================================================
      */
+    //adding element matric number
     private static final String MESSAGE_ADDED = "New person added: %1$s, Phone: %2$s, Email: %3$s";
     private static final String MESSAGE_ADDRESSBOOK_CLEARED = "Address book has been cleared!";
     private static final String MESSAGE_COMMAND_HELP = "%1$s: %2$s";
